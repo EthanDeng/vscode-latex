@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.recipes\PYGZdq{}}\PYG{err}{:} \PYG{p}{[}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}PDFLaTeX\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}pdflatex\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}XeLaTeX\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}xelatex\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmk\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}latexmk\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}BibTeX\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}bibtex\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}pdflatex \PYGZhy{}\PYGZgt{} bibtex \PYGZhy{}\PYGZgt{} pdflatex*2\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}pdflatex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}bibtex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}pdflatex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}pdflatex\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}xelatex \PYGZhy{}\PYGZgt{} bibtex \PYGZhy{}\PYGZgt{} xelatex*2\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}xelatex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}bibtex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}xelatex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}xelatex\PYGZdq{}}
+      \PYG{p}{]}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{p}{]}\PYG{err}{,}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{为什么用 Visual Studio Code}{}% 1
+\BOOKMARK [1][-]{section.2}{准备工作}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{安装插件}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{添加环境变量}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{配置编译方式与编译组合}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{编译方式（shelltool）}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{编译组合（shellrecipe）}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{指定编译方式}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{其他配置}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{配置快捷键}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{配置阅读器以及自动编译}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Mac 系统 PDF 阅读器配置}{section.4}% 12
