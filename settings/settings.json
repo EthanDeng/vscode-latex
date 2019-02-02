@@ -4,196 +4,195 @@
     "latex-workshop.latex.autoBuild.onSave.enabled": false,
     "latex-workshop.message.information.show": true,
     "latex-workshop.latex.tools": [
-      {
+   	{
         "name": "xelatex",
-          "command": "xelatex",
-          "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
-          ]
-      },
-      {
+        "command": "xelatex",
+        "args": [
+        	"-synctex=1",
+        	"-interaction=nonstopmode",
+        	"-file-line-error",
+        	"%DOC%"
+        ]
+    },
+    {
         "name": "xelatex-with-shell-escape",
         "command": "xelatex",
         "args": [
-          "--shell-escape",
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
+			"--shell-escape",
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"%DOC%"
         ]
-      },
-      {
-          "name": "xelatex-latexmk",
-          "command": "latexmk",
-          "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-xelatex",
-          "-outdir=%OUTDIR%",
-          "%DOC%"
-          ]
-      },
-      {
-          "name": "xelatex-latexmk-with-shell-escape",
-          "command": "latexmk",
-          "args": [
-            "--shell-escape",
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-xelatex",
-          "-outdir=%OUTDIR%",
-          "%DOC%"
-          ]
-      },
-      {
+    },
+    {
+	    "name": "xelatex-latexmk",
+		"command": "latexmk",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-xelatex",
+			"-outdir=%OUTDIR%",
+			"%DOC%"
+      	]
+    },
+    {
+		"name": "xelatex-latexmk-with-shell-escape",
+		"command": "latexmk",
+		"args": [
+			"--shell-escape",
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-xelatex",
+			"-outdir=%OUTDIR%",
+			"%DOC%"
+		]
+    },
+    {
         "name": "pdflatex",
         "command": "pdflatex",
         "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"%DOC%"
         ]
-      },
-      {
+    },
+    {
         "name": "pdflatex-with-shell-escape",
         "command": "pdflatex",
         "args": [
-          "--shell-escape",
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "%DOC%"
+			"--shell-escape",
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"%DOC%"
         ]
-      },
-      {
-          "name": "pdflatex-latexmk",
-          "command": "latexmk",
-          "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-pdf",
-          "-outdir=%OUTDIR%",
-          "%DOC%"
-          ]
-      },
-      {
-          "name": "pdflatex-latexmk-with-shell-escape",
-          "command": "latexmk",
-          "args": [
-            "--shell-escape",
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-pdf",
-          "-outdir=%OUTDIR%",
-          "%DOC%"
-          ]
-      },
-      {
+    },
+    {
+		"name": "pdflatex-latexmk",
+		"command": "latexmk",
+		"args": [
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-pdf",
+			"-outdir=%OUTDIR%",
+			"%DOC%"
+		]
+    },
+    {
+		"name": "pdflatex-latexmk-with-shell-escape",
+		"command": "latexmk",
+		"args": [
+			"--shell-escape",
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-pdf",
+			"-outdir=%OUTDIR%",
+			"%DOC%"
+		]
+    },
+    {
         "name": "latexmk",
         "command": "latexmk",
         "args": [
-          "-synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-pdf",
-          "%DOC%"
+			"-synctex=1",
+			"-interaction=nonstopmode",
+			"-file-line-error",
+			"-pdf",
+			"%DOC%"
         ]
-      },
-      {
+    },
+    {
         "name": "bibtex",
         "command": "bibtex",
         "args": [
-          "%DOCFILE%"
+        	"%DOCFILE%"
         ]
-      }
-    ],
-    
+    },
+	],
     "latex-workshop.latex.recipes": [
-      {
-        "name": "PDFLaTeX",
-        "tools": [
-          "pdflatex"
-         ]
-      },
-      {
+    {
+		"name": "PDFLaTeX",
+		"tools": [
+			"pdflatex"
+		 ]
+    },
+    {
         "name": "PDFLaTeX with Shell Escape",
         "tools": [
-          "pdflatex-with-shell-escape"
+        	"pdflatex-with-shell-escape"
         ]
-        },
-      {
-            "name": "PDFLaTeX Auto",
-            "tools": [
-              "pdflatex-latexmk"
-            ]
-        },
-        {
-            "name": "PDFLaTeX Auto with Shell Escape",
-            "tools": [
-              "pdflatex-latexmk-with-shell-escape"
-            ]
-        },
-      {
+    },
+    {
+        "name": "PDFLaTeX Auto",
+        "tools": [
+        	"pdflatex-latexmk"
+        ]
+    },
+    {
+        "name": "PDFLaTeX Auto with Shell Escape",
+        "tools": [
+        	"pdflatex-latexmk-with-shell-escape"
+        ]
+    },
+    {
         "name": "XeLaTeX",
         "tools": [
-          "xelatex"
-         ]
-      },
-      {
+        	"xelatex"
+        ]
+    },
+    {
         "name": "XeLaTeX with Shell Escape",
         "tools": [
-          "xelatex-with-shell-escape"
+        	"xelatex-with-shell-escape"
         ]
-        },
-      {
-            "name": "XeLaTeX Auto",
-            "tools": [
-              "xelatex-latexmk"
-            ]
-        },
-        {
-            "name": "XeLaTeX Auto with Shell Escape",
-            "tools": [
-              "xelatex-latexmk-with-shell-escape"
-            ]
-        },
-      {
-          "name": "PDFLaTeX -> BibTeX -> PDFLaTeX*2",
-          "tools": [
-            "pdflatex",
-            "bibtex",
-            "pdflatex",
-            "pdflatex"
-          ]
-      },
-      {
-          "name": "XeLaTeX -> BibTeX -> XeLaTeX*2",
-          "tools": [
-            "xelatex",
-            "bibtex",
-            "xelatex",
-            "xelatex"
+    },
+    {
+        "name": "XeLaTeX Auto",
+        "tools": [
+        	"xelatex-latexmk"
         ]
-      }
-        {
-          "name": "latexmk",
-          "tools": [
-            "latexmk"
-          ]
-      },
-      {
-          "name": "BibTeX",
-          "tools": [
-            "bibtex"
-          ]
-      },
+    },
+    {
+        "name": "XeLaTeX Auto with Shell Escape",
+        "tools": [
+          "xelatex-latexmk-with-shell-escape"
+        ]
+    },
+  	{
+		"name": "PDFLaTeX -> BibTeX -> PDFLaTeX*2",
+		"tools": [
+			"pdflatex",
+			"bibtex",
+			"pdflatex",
+			"pdflatex"
+		]
+  	},
+  	{
+		"name": "XeLaTeX -> BibTeX -> XeLaTeX*2",
+		"tools": [
+			"xelatex",
+			"bibtex",
+			"xelatex",
+			"xelatex"
+    	]
+  	},
+    {
+      	"name": "latexmk",
+      	"tools": [
+        	"latexmk"
+      	]
+  	},
+  	{
+      	"name": "BibTeX",
+      	"tools": [
+       		"bibtex"
+      	]
+  	},
     ],
 }
