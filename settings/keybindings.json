@@ -1,0 +1,57 @@
+// 将按键绑定配置放入此文件中即可覆盖默认值
+[
+    {
+        "key": "ctrl+l ctrl+k",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "latex-workshop.build",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-latex-workshop.build",
+        "when": "editorTextFocus && !isMac"
+    },
+    {
+        "key": "ctrl+l ctrl+o",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+o ctrl+j",
+        "command": "workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "latex-workshop.recipes"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "latex-workshop.view",
+        "when": "editorTextFocus && !latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-latex-workshop.view",
+        "when": "editorTextFocus && !latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+l ctrl+o",
+        "command": "latex-workshop.log"
+    }
+]
