@@ -275,6 +275,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 \subsection{指定编译方式}
 在 Sublime Text 或者 TeX Studio 中，可以在文件的首行指定编译方式（\mintinline{shell}{% !TEX program}）以及主文档（\mintinline{shell}{% !TEX root}），\LaTeX{} Workshop 也把这个功能添加到了其中，使用方法完全一样。\mintinline{shell}{% !TEX program} 和 \mintinline{shell}{% !TEX root} 被称为 Magic Command（魔法注释）。示例如下：
 
+
 \begin{minted}[frame=single]{latex}
 % !TEX program = xelatex
 \documentclass{article}
@@ -297,6 +298,7 @@ Example text.
 \subsection{配置快捷键}
 \LaTeX{} Workshop 的快捷键并不友好，我们可以自定义快捷键，方法如下：点击 VS Code 左下角的齿轮（设置），选择 \mintinline{shell}{键盘快捷方式}。
 
+
 \begin{itemize}
   \item 搜索 \mintinline{shell}{latex build project}，将默认的快捷方式改为 \mintinline{shell}{Ctrl+B}
   \item 搜索 \mintinline{shell}{latex build with recipe}，将其改为 \mintinline{shell}{Ctrl+R}
@@ -307,6 +309,7 @@ Example text.
 配置好快捷键之后，之后当你指定了编译方式时可以直接使用快捷键 \mintinline{shell}{Ctrl+B} 编译一次文档。当你需要完整编译整个文档（文献，目录等），使用快捷键 \mintinline{shell}{Ctrl+R}，选择完整的编译方案即可。是不是方便多了？
 
 \textbf{补充}：为了方便快捷键的绑定，这里直接提供设置文件（\mintinline{shell}{keybindings.json}）的 \href{https://github.com/EthanDeng/vscode-latex/blob/master/settings/keybindings.json}{下载}，下载之后只需要将其替换用户的快捷键设置即可（默认位置为：\mintinline[breaklines]{shell}{C:/Users/<Your User Name>/AppData/Roaming/Code/User}）。
+
 
 \subsection{配置阅读器以及自动编译}
 还有其他几个设置需要提一下，由于笔记本的屏幕很小，我并不习惯使用 VS Code 自带的 PDF 阅读器作为预览的阅读器，可以设置 \mintinline{shell}{SumatraPDF} 作为 PDF 阅读器。另外，自动编译选项我也选择关闭。
