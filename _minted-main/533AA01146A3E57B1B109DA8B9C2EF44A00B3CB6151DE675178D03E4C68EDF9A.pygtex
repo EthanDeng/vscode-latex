@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+pdflatex \PYGZhy{}\PYGZgt{} bibtex \PYGZhy{}\PYGZgt{} pdflatex \PYGZhy{}\PYGZgt{} pdflatex
+\end{Verbatim}
