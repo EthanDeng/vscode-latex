@@ -1,0 +1,84 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.tools\PYGZdq{}}\PYG{err}{:} \PYG{p}{[}
+\PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texifyxe\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}command\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texify\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}args\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}synctex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}pdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}engine=xetex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZbs{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZbs{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+        \PYG{p}{],}
+        \PYG{n+nt}{\PYGZdq{}env\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}\PYGZcb{}}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texifypdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}command\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texify\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}args\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}synctex\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}pdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZbs{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZbs{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+        \PYG{p}{],}
+        \PYG{n+nt}{\PYGZdq{}env\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}\PYGZcb{}}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmkxe\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}command\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmk\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}args\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}synctex=1\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}xelatex\PYGZdq{}}\PYG{p}{,}
+        \PYG{err}{//}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}outdir=\PYGZpc{}OUTDIR\PYGZpc{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+        \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmkpdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}command\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmk\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}args\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}synctex=1\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}pdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{err}{//}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}outdir=\PYGZpc{}OUTDIR\PYGZpc{}\PYGZdq{}}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+        \PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{]}\PYG{err}{,}
+
+    \PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.recipes\PYGZdq{}}\PYG{err}{:} \PYG{p}{[}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texifyxe\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}texifyxe\PYGZdq{}}\PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}texifypdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}texifypdf\PYGZdq{}}\PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmkxe\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}latexmkxe\PYGZdq{}}\PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}latexmkpdf\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}tools\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}latexmkpdf\PYGZdq{}}\PYG{p}{]}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{]}\PYG{err}{,}
+
+    \PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.magic.args\PYGZdq{}}\PYG{err}{:} \PYG{p}{[}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}synctex=1\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}\PYGZdq{}}
+    \PYG{p}{]}\PYG{err}{,}
+    \PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.magic.bib.args\PYGZdq{}}\PYG{err}{:} \PYG{p}{[}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOCFILE\PYGZpc{}\PYGZdq{}}
+    \PYG{p}{]}\PYG{err}{,}
+
+    \PYG{err}{//}\PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.outDir\PYGZdq{}}\PYG{err}{:}\PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}\PYGZdq{}}\PYG{err}{,}
+\end{Verbatim}

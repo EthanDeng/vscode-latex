@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} !TEX program = texify}
+\PYG{c}{\PYGZpc{} !TEX options = \PYGZhy{}\PYGZhy{}synctex \PYGZhy{}\PYGZhy{}pdf \PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZbs{}\PYGZdq{} \PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZbs{}\PYGZdq{} \PYGZdq{}\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+\PYG{c}{\PYGZpc{}魔法注释加在上面，替换称你想用的就行了。记得下面两行选择相应的一行使用。}
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[UTF8]}\PYG{n+nb}{\PYGZob{}}ctexart\PYG{n+nb}{\PYGZcb{}}\PYG{c}{\PYGZpc{}测试pdflatex时用这个，把下面那句注释掉。}
+\PYG{c}{\PYGZpc{}\PYGZbs{}documentclass\PYGZob{}ctexart\PYGZcb{}\PYGZpc{}测试xelatex时用这个，把上面那句注释掉。}
+
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}A Silly Article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}Me\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}maketitle}
+
+My favorite article is \PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}supercurves\PYG{n+nb}{\PYGZcb{}}.
+我最喜欢的文章是\PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}supercurves\PYG{n+nb}{\PYGZcb{}}。
+\PYG{k}{\PYGZbs{}bibliographystyle}\PYG{n+nb}{\PYGZob{}}plain\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}bibliography}\PYG{n+nb}{\PYGZob{}}shortbib\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{}还需要建立一个shortbib.bib文件和这个文件放一起。}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

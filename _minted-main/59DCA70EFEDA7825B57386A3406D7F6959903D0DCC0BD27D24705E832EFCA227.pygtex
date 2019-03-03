@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{err}{\PYGZpc{}} \PYG{err}{!TEX} \PYG{err}{program} \PYG{err}{=} \PYG{err}{texify}
+\PYG{err}{\PYGZpc{}} \PYG{err}{!TEX} \PYG{err}{options} \PYG{err}{=} \PYG{err}{\PYGZhy{}\PYGZhy{}synctex} \PYG{err}{\PYGZhy{}\PYGZhy{}pdf} \PYG{err}{\PYGZhy{}\PYGZhy{}engine=xetex} \PYG{err}{\PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}interaction=nonstopmode\PYGZbs{}\PYGZdq{} \PYGZhy{}\PYGZhy{}tex\PYGZhy{}option=\PYGZbs{}\PYGZdq{}\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error\PYGZbs{}\PYGZdq{} \PYGZdq{}}\PYG{err}{\PYGZpc{}DOC\PYGZpc{}.tex\PYGZdq{}}
+\end{Verbatim}

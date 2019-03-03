@@ -18,12 +18,12 @@
 
 \usepackage{xeCJK}
 \usepackage{fontspec,xunicode,xltxtra}
-%\setmainfont{Minion Pro}
-%\setsansfont{Myriad Pro}
-%\setmonofont{Ubuntu Mono}
-%\setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
-%\setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
-%\setCJKmonofont{方正楷体简体}
+\setmainfont{Minion Pro}
+\setsansfont{Myriad Pro}
+\setmonofont{Ubuntu Mono}
+\setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
+\setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
+\setCJKmonofont{方正楷体简体}
 
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
@@ -273,25 +273,116 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 
 
 \subsection{指定编译方式}
-在 Sublime Text 或者 \TeX{} Studio 中，可以在文件的首行指定编译方式（\mintinline{shell}{% !TEX program}）以及主文档（\mintinline{shell}{% !TEX root}），\LaTeX{} Workshop 也把这个功能添加到了其中，使用方法完全一样。\mintinline{shell}{% !TEX program} 和 \mintinline{shell}{% !TEX root} 被称为 Magic Command（魔法注释）。示例如下：
+在 Sublime Text 或者 \TeX{} Studio 中，可以在文件的首行指定编译方式（\mintinline{shell}{% !TEX program}）以及主文档（\mintinline{shell}{% !TEX root}），\LaTeX{} Workshop 也把这个功能添加到了其中，使用方法完全一样。\mintinline{shell}{% !TEX program} 和 \mintinline{shell}{% !TEX root} 被称为 Magic Command（魔法注释）。
 
 
-\begin{minted}[frame=single]{latex}
-% !TEX program = xelatex
-\documentclass{article}
+%下面这部分可以加到其它编译方式里面。
 
-\author{Dongsheng Deng}
-\title{Configuration of Visual Studio Code for \LaTeX{} Users}
+之前的魔法注释还不支持指定参数，现在已经可以了。
+
+首先可以给它的配置文件里面先加上默认的魔法注释参数，如下：
+\begin{minted}[frame=single]{json}
+"latex-workshop.latex.magic.args": [
+  "-synctex=1",
+  "-interaction=nonstopmode",
+  "-file-line-error",
+  "%DOC%"
+]
+"latex-workshop.latex.magic.bib.args": [
+  "%DOCFILE%"
+],
+\end{minted}
+
+
+
+
+这时候在主文件开头加上魔法注释\mintinline{shell}{% !TEX program = xelatex}
+运行时相当于
+
+\mintinline{shell}{xelatex.exe -synctex=1 -interaction=nonstopmode  -file-line-error "yourfile".tex}。
+
+如果你还要用\mintinline{shell}{bibtex}编译参考文献的话在上一个魔法注释下面再加一个魔法注释：
+
+\mintinline{shell}{% !BIB program = bibtex}，如果用的是\mintinline{shell}{biber}，后面的参数可以改成\mintinline{shell}{biber}。
+
+但是你可能想让不同的文档编译时可以带不同的参数，这时候还可以再加一个魔法注释：
+
+\mintinline{shell}{% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"}，等号后面的参数可以自己按需求修改。
+
+看到这里\mintinline{shell}{texify}和\mintinline{shell}{latexmk}用户觉得比较实用了了。不需要修改配置文件，直接用魔法注释就可以实现你想要的编译。
+
+下面来说明这两种的魔法注释怎么写。
+
+对于\mintinline{shell}{texify}:
+想用xelatex的话这么配置魔法注释
+
+\begin{minted}[frame=single,tabsize=2,breaklines=true]{json}
+% !TEX program = texify
+% !TEX options = --synctex --pdf --engine=xetex --tex-option=\"-interaction=nonstopmode\" --tex-option=\"-file-line-error\" "%DOC%.tex"
+\end{minted}
+
+
+只用普通的pdflatex的话用下面这个魔法注释
+\begin{minted}[frame=single,tabsize=2,breaklines=true]{json}
+% !TEX program = texify
+% !TEX options = --synctex --pdf --tex-option=\"-interaction=nonstopmode\" --tex-option=\"-file-line-error\" "%DOC%.tex"
+\end{minted}
+
+
+
+
+对于\mintinline{shell}{latexmk}用户也是类似的，但是目前有点奇怪如果你使用了\mintinline{shell}{"latex-workshop.latex.outDir":"%DOC%"},这种指定文件路径的参数，魔法注释明明指定了要生成pdf，可是它最终只编译出dvi，可能\mintinline{shell}{latexmk}用户这个魔法注释还是不能非常愉快的玩耍。所以不要去改变辅助文件的存放位置比较好。
+
+指定用pdflatex编译
+
+\begin{minted}[frame=single,tabsize=2,breaklines]{json}
+% !TEX program = latexmk 
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -pdf "%DOC%"
+\end{minted}
+
+指定用xelatex编译
+\begin{minted}[frame=single]{json}
+% !TEX program = latexmk 
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -xelatex "%DOC%"
+\end{minted}
+
+
+下面给一个MWE:
+
+\begin{minted}[frame=single,breaklines]{latex}
+% !TEX program = texify
+% !TEX options = --synctex --pdf --tex-option=\"-interaction=nonstopmode\" --tex-option=\"-file-line-error\" "%DOC%.tex"
+%魔法注释加在上面，替换称你想用的就行了。记得下面两行选择相应的一行使用。
+\documentclass[UTF8]{ctexart}%测试pdflatex时用这个，把下面那句注释掉。
+%\documentclass{ctexart}%测试xelatex时用这个，把上面那句注释掉。
+
+\title{A Silly Article}
+\author{Me}
 
 \begin{document}
-
 \maketitle
-Example text.
 
+My favorite article is \cite{supercurves}. 
+我最喜欢的文章是\cite{supercurves}。
+\bibliographystyle{plain}
+\bibliography{shortbib} %还需要建立一个shortbib.bib文件和这个文件放一起。
 \end{document}
 \end{minted}
 
-将上述代码保存为 \mintinline{shell}{test.tex}，然后使用快捷键 \mintinline{shell}{Ctrl+Alt+B}，系统会自动选择 \mintinline{shell}{xelatex} 作为编译方式。如果没有其他问题，就能正常编译。
+\begin{minted}[frame=single]{latex}
+%这是shortbib.bib文件
+@ARTICLE{supercurves,
+AUTHOR={Minghui Xia},
+TITLE={Image Registration by "Super-Curves"},
+JOURNAL={IEEE Transactions on Image Processing},
+YEAR={1985},
+VOLUME = {13},
+PAGES={720},
+}
+\end{minted}
+
+将上述代码保存，然后使用快捷键 \mintinline{shell}{Ctrl+Alt+B}，系统会自动选择相应的编译方式。如果没有其他问题，就能正常编译。
+
 
 
 \section{其他配置}
@@ -321,6 +412,98 @@ Example text.
 
 \subsection{Mac 系统 PDF 阅读器配置}
 如何让 VS Code 在 Mac 上与诸如 Skim 的外部 PDF 浏览器配合工作——特别是 \LaTeX{} 的正反跳转，请参考小 L 的 \href{https://liam0205.me/2018/04/24/Working-with-VSCode-on-macOS-configuration-LaTeX-workshop-and-Skim/}{配置说明}。
+
+%如果你认为值得分享的话可以加进去
+\section{texify和latexmk部分的配置文件}
+如果你想用配置文件的话，下面我提供\mintinline{shell}{texify}和\mintinline{shell}{latexmk}的配置。
+
+\begin{minted}[frame=single]{json}
+"latex-workshop.latex.tools": [
+{
+        "name": "texifyxe",
+        "command": "texify",
+        "args": [
+        "--synctex",
+        "--pdf",
+        "--engine=xetex",
+        "--tex-option=\"-interaction=nonstopmode\"",
+        "--tex-option=\"-file-line-error\"",
+        "%DOC%.tex"
+        ],
+        "env": {}
+    },
+    {
+        "name": "texifypdf",
+        "command": "texify",
+        "args": [
+        "--synctex",
+        "--pdf",
+        "--tex-option=\"-interaction=nonstopmode\"",
+        "--tex-option=\"-file-line-error\"",
+        "%DOC%.tex"
+        ],
+        "env": {}
+    },
+    {
+        "name": "latexmkxe",
+        "command": "latexmk",
+        "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        //"-outdir=%OUTDIR%",
+        "%DOC%.tex"
+        ]
+    },
+    {
+        "name": "latexmkpdf",
+        "command": "latexmk",
+        "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        //"-outdir=%OUTDIR%",
+        "%DOC%.tex"
+        ]
+    },
+    ],
+    
+    "latex-workshop.latex.recipes": [
+    {
+        "name": "texifyxe",
+        "tools": ["texifyxe"]
+    },
+    {
+        "name": "texifypdf",
+        "tools": ["texifypdf"]
+    },
+    {
+        "name": "latexmkxe",
+        "tools": ["latexmkxe"]
+    },
+    {
+        "name": "latexmkpdf",
+        "tools": ["latexmkpdf"]
+    },
+    ],
+    
+    "latex-workshop.latex.magic.args": [
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "%DOC%"
+    ],
+    "latex-workshop.latex.magic.bib.args": [
+    "%DOCFILE%"
+    ],
+    
+    //"latex-workshop.latex.outDir":"%DOC%",
+    
+\end{minted}
+
+
 
 \section*{参考资料}
 \begin{itemize}

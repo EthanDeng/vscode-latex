@@ -1,3 +1,3 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-test.tex
+\PYGZpc{} !BIB \PYG{n+nv}{program} \PYG{o}{=} bibtex
 \end{Verbatim}
