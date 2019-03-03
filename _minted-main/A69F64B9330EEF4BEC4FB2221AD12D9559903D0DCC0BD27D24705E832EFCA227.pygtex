@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{err}{\PYGZpc{}} \PYG{err}{!TEX} \PYG{err}{program} \PYG{err}{=} \PYG{err}{latexmk}
-\PYG{err}{\PYGZpc{}} \PYG{err}{!TEX} \PYG{err}{options} \PYG{err}{=} \PYG{err}{\PYGZhy{}synctex=}\PYG{l+m+mi}{1} \PYG{err}{\PYGZhy{}interaction=nonstopmode} \PYG{err}{\PYGZhy{}file\PYGZhy{}line\PYGZhy{}error} \PYG{err}{\PYGZhy{}xelatex} \PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}DOC\PYGZpc{}\PYGZdq{}}
-\end{Verbatim}

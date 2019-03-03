@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.view.pdf.viewer\PYGZdq{}}\PYG{err}{:} \PYG{l+s+s2}{\PYGZdq{}external\PYGZdq{}}\PYG{err}{,}
-\PYG{l+s+s2}{\PYGZdq{}latex\PYGZhy{}workshop.latex.autoBuild.onSave.enabled\PYGZdq{}}\PYG{err}{:} \PYG{k+kc}{false}\PYG{err}{,}
-\end{Verbatim}

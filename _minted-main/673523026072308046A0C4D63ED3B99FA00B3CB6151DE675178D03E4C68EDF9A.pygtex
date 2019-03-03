@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-xelatex.exe \PYGZhy{}synctex\PYG{o}{=}\PYG{l+m}{1} \PYGZhy{}interaction\PYG{o}{=}nonstopmode  \PYGZhy{}file\PYGZhy{}line\PYGZhy{}error \PYG{l+s+s2}{\PYGZdq{}yourfile\PYGZdq{}}.tex
-\end{Verbatim}
