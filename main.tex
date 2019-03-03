@@ -1,10 +1,11 @@
 % !TEX options=--shell-escape
 %!TEX program = xelatex
+
 \documentclass{article}
 \usepackage{minted}
-\setminted[latex]{fontsize=\footnotesize}
-\setminted[json]{fontsize=\footnotesize}
-\setminted[shell]{fontsize=\small}
+\setminted{fontsize=\small}
+% \setminted[json]{fontsize=\footnotesize}
+% \setminted[shell]{fontsize=\small}
 \usepackage{graphicx}
 \graphicspath{{image/}{figure/}{fig/}{img/}}
 \usepackage[a4paper,margin=2.5cm]{geometry}
@@ -18,9 +19,9 @@
 
 \usepackage{xeCJK}
 \usepackage{fontspec,xunicode,xltxtra}
-\setmainfont{Minion Pro}
-\setsansfont{Myriad Pro}
-\setmonofont{Ubuntu Mono}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\usepackage{FiraMono}
 \setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
 \setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
 \setCJKmonofont{方正楷体简体}
@@ -206,12 +207,6 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
     ]
   },
   {
-    "name": "PDFLaTeX Auto",
-    "tools": [
-      "pdflatex-latexmk"
-    ]
-  },
-  {
     "name": "XeLaTeX",
     "tools": [
       "xelatex"
@@ -221,12 +216,6 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
     "name": "XeLaTeX with Shell Escape",
     "tools": [
       "xelatex-with-shell-escape"
-    ]
-  },
-  {
-    "name": "XeLaTeX Auto",
-    "tools": [
-      "xelatex-latexmk"
     ]
   },
   {
