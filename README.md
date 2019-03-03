@@ -41,7 +41,7 @@ git push -u origin master
 + [方正书宋简体](http://www.foundertype.com/index.php/FontInfo/index.html?id=151)
 + [方正楷体简体](http://www.foundertype.com/index.php/FontInfo/index.html?id=137)
 + [方正黑体简体](http://www.foundertype.com/index.php/FontInfo/index.html?id=131)
-+ [Libertinus 系列](https://github.com/libertinus-fonts/libertinus)：（Libertinus Serief，Libertinus Sans）
++ [Libertinus 系列](https://github.com/libertinus-fonts/libertinus)：（Libertinus Serif，Libertinus Sans）
 
 ### 代码高亮
 
