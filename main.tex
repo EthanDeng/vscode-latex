@@ -1,11 +1,11 @@
 % !TEX options=--shell-escape
-%!TEX program = xelatex
+% !TEX program = xelatex
 
 \documentclass{article}
 \usepackage{minted}
 \setminted{fontsize=\small}
-% \setminted[json]{fontsize=\footnotesize}
-% \setminted[shell]{fontsize=\small}
+ \setminted[json]{fontsize=\footnotesize}
+ \setminted[shell]{fontsize=\small}
 \usepackage{graphicx}
 \graphicspath{{image/}{figure/}{fig/}{img/}}
 \usepackage[a4paper,margin=2.5cm]{geometry}
@@ -19,8 +19,8 @@
 
 \usepackage{xeCJK}
 \usepackage{fontspec,xunicode,xltxtra}
-\setmainfont{Libertinus Serif}
-\setsansfont{Libertinus Sans}
+ \setmainfont{Libertinus Serif}
+ \setsansfont{Libertinus Sans}
 \usepackage{FiraMono}
 \setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
 \setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
@@ -171,7 +171,33 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
     "args": [
       "%DOCFILE%"
     ]
-  }
+  },
+//CamuseCao 2019-03-07
+  {
+    "name": "texifyxe",
+    "command": "texify",
+    "args": [
+      "--synctex",
+      "--pdf",
+      "--engine=xetex",
+      "--tex-option=\"-interaction=nonstopmode\"",
+      "--tex-option=\"-file-line-error\"",
+      "%DOC%.tex"
+    ],
+    "env": {}
+  },
+  {
+    "name": "texifypdf",
+    "command": "texify",
+    "args": [
+      "--synctex",
+      "--pdf",
+      "--tex-option=\"-interaction=nonstopmode\"",
+      "--tex-option=\"-file-line-error\"",
+      "%DOC%.tex"
+    ],
+    "env": {}
+  },
 ],
 \end{minted}
 
@@ -248,6 +274,19 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
       "bibtex"
     ]
   },
+//CamuseCao 2019-03-07
+  {
+    "name": "texifyxe",
+    "tools": [
+      "texifyxe"
+    ]
+  },
+   {
+    "name": "texifypdf",
+    "tools": [
+      "texifypdf"
+    ]
+  },
 ],
 \end{minted}
 
@@ -281,6 +320,8 @@ Example text.
 \end{minted}
 
 将上述代码保存为 \mintinline{shell}{test.tex}，然后使用快捷键 \mintinline{shell}{Ctrl+Alt+B}，系统会自动选择 \mintinline{shell}{xelatex} 作为编译方式。如果没有其他问题，就能正常编译。
+
+
 
 
 \section{其他配置}
