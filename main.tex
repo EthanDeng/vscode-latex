@@ -2,7 +2,9 @@
 %!TEX options = --shell-escape
 
 \documentclass{article}
+\usepackage{fontenc}
 \usepackage{minted}
+\usepackage{upquote}
 \setminted{fontsize=\small}
  \setminted[json]{fontsize=\footnotesize}
  \setminted[shell]{fontsize=\small}
@@ -16,12 +18,12 @@
   citecolor=Violet,
   linkcolor=Red,
   urlcolor=NavyBlue}
-
 \usepackage{xeCJK}
 \usepackage{fontspec,xunicode,xltxtra}
  \setmainfont{Libertinus Serif}
  \setsansfont{Libertinus Sans}
-\usepackage{FiraMono}
+%  \setmonofont{Ubuntu Mono}
+% \usepackage{FiraMono}
 \setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
 \setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
 \setCJKmonofont{方正楷体简体}
@@ -108,7 +110,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 \end{figure}
 
 
-打开配置文件之后，在右侧 \mintinline{shell}{用户设置} 粘贴下面 JSON 片段：
+打开配置文件之后，在右侧 \mintinline{shell}{用户设置} 粘贴\footnote{最好从 \mintinline{shell}{main.tex} 里面拷贝，注意，引号全部为英文引号。}下面 JSON 片段\footnote{粘贴在 \mintinline{shell}{]} 之前，务必保证 JSON 格式的完整性。}：
 
 \begin{minted}[frame=single]{json}
 "latex-workshop.latex.tools": [
@@ -172,32 +174,6 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
       "%DOCFILE%"
     ]
   },
-//CamuseCao 2019-03-07
-  {
-    "name": "texifyxe",
-    "command": "texify",
-    "args": [
-      "--synctex",
-      "--pdf",
-      "--engine=xetex",
-      "--tex-option=\"-interaction=nonstopmode\"",
-      "--tex-option=\"-file-line-error\"",
-      "%DOC%.tex"
-    ],
-    "env": {}
-  },
-  {
-    "name": "texifypdf",
-    "command": "texify",
-    "args": [
-      "--synctex",
-      "--pdf",
-      "--tex-option=\"-interaction=nonstopmode\"",
-      "--tex-option=\"-file-line-error\"",
-      "%DOC%.tex"
-    ],
-    "env": {}
-  },
 ],
 \end{minted}
 
@@ -209,7 +185,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.5\textwidth]{compile.png}
+  \includegraphics[width=0.5\textwidth]{compile.jpg}
   \caption{编译组合的选择}
   \label{fig:example}
 \end{figure}
@@ -274,19 +250,6 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
       "bibtex"
     ]
   },
-//CamuseCao 2019-03-07
-  {
-    "name": "texifyxe",
-    "tools": [
-      "texifyxe"
-    ]
-  },
-   {
-    "name": "texifypdf",
-    "tools": [
-      "texifypdf"
-    ]
-  },
 ],
 \end{minted}
 
@@ -342,11 +305,10 @@ Example text.
 
 
 \subsection{配置阅读器以及自动编译}
-还有其他几个设置需要提一下，由于笔记本的屏幕很小，我并不习惯使用 VS Code 自带的 PDF 阅读器作为预览的阅读器，可以设置 \mintinline{shell}{SumatraPDF} 作为 PDF 阅读器。另外，自动编译选项我也选择关闭。
+还有其他几个设置需要提一下，由于笔记本的屏幕很小，我并不习惯使用 VS Code 自带的 PDF 阅读器作为预览的阅读器，可以设置 \mintinline{shell}{SumatraPDF} 作为 PDF 阅读器。
 
 \begin{minted}[frame=single]{json}
 "latex-workshop.view.pdf.viewer": "external",
-"latex-workshop.latex.autoBuild.onSave.enabled": false,
 \end{minted}
 
 \subsection{Mac 系统 PDF 阅读器配置}
