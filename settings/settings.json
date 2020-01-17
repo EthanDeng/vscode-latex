@@ -1,5 +1,10 @@
 {
     "latex-workshop.view.pdf.viewer": "external",
+	"latex-workshop.view.pdf.external.viewer.command": "E:/soft/SumatraPDF/SumatraPDF.exe",  //绝对路径 
+    "latex-workshop.view.pdf.external.viewer.args": [
+            "--unique",
+            "%PDF%"
+    ],
     "editor.minimap.enabled": true,
     "latex-workshop.latex.tools": [
         {
