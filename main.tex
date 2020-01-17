@@ -20,13 +20,13 @@
   urlcolor=NavyBlue}
 \usepackage{xeCJK}
 \usepackage{fontspec,xunicode,xltxtra}
- \setmainfont{Libertinus Serif}
- \setsansfont{Libertinus Sans}
+ \setmainfont{LibertinusSerif-Regular}
+ \setsansfont{LibertinusSans-Regular}
 %  \setmonofont{Ubuntu Mono}
 % \usepackage{FiraMono}
-\setCJKmainfont[ItalicFont={方正楷体简体}, BoldFont={方正黑体简体}]{方正书宋简体}
-\setCJKsansfont[BoldFont={方正黑体简体}]{方正楷体简体}
-\setCJKmonofont{方正楷体简体}
+\setCJKmainfont[ItalicFont={FZKTJW.ttf}, BoldFont={FZHTJW.ttf}]{FZSSJW.ttf}
+\setCJKsansfont[BoldFont={FZHTJW.ttf}]{FZKTJW.ttf}
+\setCJKmonofont{FZKTJW.ttf}
 
 \usepackage{indentfirst}
 \setlength{\parindent}{2em}
@@ -98,7 +98,7 @@ Win10 中将路径添加到环境变量中的步骤如下：右键我的电脑�
 \section{配置编译方式与编译组合}
 VS Code 在 2018 年经历了一次大改之后，配置比原来简单了。它们把过去的 \mintinline{shell}{tool.chain} 改为了 \mintinline{shell}{recipe}，其实本质上是一样的。
 
-\subsection{编译方式（\mintinline{shell}{tool}）}
+\subsection{编译方式（tool）}
 VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{shell}{latexmk}，\mintinline{shell}{pdflatex} 和 \mintinline{shell}{bibtex}（所有的工具只编译一次）。编译 \mintinline{shell}{tex} 文档方法，使用右键，选择 \mintinline{shell}{Build LaTeX Project}（快捷键：\mintinline{shell}{Ctrl+Alt+B}），默认使用 \mintinline{shell}{latexmk}，查看 PDF 文件使用快捷键：\mintinline{shell}{Ctrl+Alt+V}。
 
 为了添加其他的编译方式（比如 \mintinline{shell}{xelatex}），我们需要修改 \LaTeX{} Workshop 的配置。打开 LaTeX Workshop 配置的方法如下：在 VS Code 界面左下角，点击齿轮按钮 \includegraphics[width=0.018\textwidth]{setting.png}，选择\mintinline{shell}{设置}，然后在设置搜索框内输入 \mintinline{shell}{latex}，在搜索结果中，点击 \underline{\mintinline{shell}{在 settings.json 中编辑}}，示例如图~\ref{fig:settings}：
@@ -186,7 +186,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 
 \textbf{注意：}虽然左侧插件默认添加了编译方式（\mintinline{shell}{pdflatex} 与 \mintinline{shell}{bibtex}），也必须将其编译方式的设置（比如 \mintinline{shell}{pdflatex} 等）添加到右侧用户设置中。另外上面我们分别为 \mintinline{shell}{pdflatex} 和 \mintinline{shell}{xelatex} 添加了 \mintinline{shell}{--shell-escape} 参数，一个典型的应用场景就是编译包含 \mintinline{tex}{minted} 宏包的文件时。
 
-\subsection{编译组合（\mintinline{shell}{recipe}）}
+\subsection{编译组合（recipe）}
 如果我们要对一个文档/项目完整的编译（比如 \mintinline[breaklines]{shell}{pdflatex -> bibtex -> pdflatex -> pdflatex}）我们需要用到编译组合（\mintinline{shell}{recipes}）。LaTeX Workshop 默认添加了两个 \mintinline{shell}{recipes}，分别是 \mintinline{shell}{latexmk} 和 \mintinline[breaklines]{shell}{pdflatex -> bibtex -> pdflatex*2}，可以通过点击左侧新增的 \TeX{} 按钮 \includegraphics[width=0.028\textwidth]{tex.png}，然后点击 \mintinline{shell}{Build LaTeX project}，选择适合的编译组合。
 
 
@@ -194,7 +194,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
   \centering
   \includegraphics[width=0.5\textwidth]{compile.jpg}
   \caption{编译组合的选择}
-  \label{fig:example}
+  \label{fig:Compilation combination selection}
 \end{figure}
 
 
@@ -270,7 +270,7 @@ VS Code 默认添加了 3 个编译工具（tools）：分别是 \mintinline{she
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{example.png}
+  \includegraphics{example.pdf}
   \caption{编译效果图}
   \label{fig:example}
 \end{figure}
@@ -318,7 +318,7 @@ Example text.
 
 
 \subsection{配置阅读器以及自动编译}
-还有其他几个设置需要提一下，由于笔记本的屏幕很小，我并不习惯使用 VS Code 自带的 PDF 阅读器作为预览的阅读器，可以设置 \mintinline{shell}{SumatraPDF} 作为 PDF 阅读器。
+还有其他几个设置需要提一下，由于笔记本的屏幕很小，我并不习惯使用 VS Code 自带的 PDF 阅读器作为预览的阅读器，可以设置 \mintinline{shell}{SumatraPDF} 作为 PDF 阅读器\footnote{还可以设置 \mintinline{shell}{SumatraPDF} 与 VS Code 之间的正反跳转，详见\href{https://wenda.latexstudio.net/article-5055.html}{《\mintinline{shell}{SumatraPDF} 阅读器该怎么设置——以 TeXStudio 和 VS Code 为例》}}。
 
 \begin{minted}[frame=single]{json}
 "latex-workshop.view.pdf.viewer": "external",
